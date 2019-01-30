@@ -4,4 +4,10 @@ set -eu
 
 cd client
 
-npm run ng -- serve --hmr --configuration hmr --host 0.0.0.0 --disable-host-check --port 3000
+NG_CONFIGURATION="hmr"
+if [ ! -z ${API_URL+x} ]; then
+  ./src/environments/environment.dynamic.sh
+  NG_CONFIGURATION="dynamic"
+fi
+
+npm run ng -- serve --hmr --configuration $NG_CONFIGURATION --host 0.0.0.0 --disable-host-check --port 3000

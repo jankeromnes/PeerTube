@@ -66,6 +66,14 @@
                   "with": "src/environments/environment.e2e.ts"
                 }
               ]
+            },
+            "dynamic": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.dynamic.ts"
+                }
+              ]
             }
           }
         },
@@ -83,6 +91,9 @@
             },
             "e2e": {
               "browserTarget": "PeerTube:build:e2e"
+            },
+            "dynamic": {
+              "browserTarget": "PeerTube:build:dynamic"
             }
           }
         },
