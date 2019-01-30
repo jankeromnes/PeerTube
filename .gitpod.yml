@@ -1,0 +1,9 @@
+image:
+  file: support/docker/gitpod/Dockerfile
+ports:
+- port: 3000
+  onOpen: open-preview
+- port: 9000
+tasks:
+- init: yarn install --pure-lockfile
+  command: npm run dev
