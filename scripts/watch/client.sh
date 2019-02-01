@@ -10,4 +10,4 @@ if [ ! -z ${API_URL+x} ]; then
   NG_CONFIGURATION="dynamic"
 fi
 
-npm run ng -- serve --hmr --configuration $NG_CONFIGURATION --host 0.0.0.0 --disable-host-check --port 3000
+npm run ng -- serve --proxy-config proxy.config.json --hmr --configuration $NG_CONFIGURATION --host 0.0.0.0 --disable-host-check --port 3000

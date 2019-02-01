@@ -1,11 +1,10 @@
-FROM gitpod/workspace-full:latest
+FROM gitpod/workspace-postgres
 
 USER gitpod
 
 # Install PeerTube's dependencies.
 RUN sudo apt-get update -q && sudo apt-get install -qy \
  ffmpeg \
- postgresql \
  openssl
 
 # Set up PostgreSQL.
